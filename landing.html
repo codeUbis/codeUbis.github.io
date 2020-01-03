@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Molle:400i|Roboto:100,400,700,900&display=swap&subset=latin-ext" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/368f7e606b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/project.css">
+    <title>Booking Greece</title>
+</head>
+<body>
+    <!-- Navigation bars -->
+    <section class="container-narow">
+        <div class="navbar">
+            <nav class="nav-top flex-container">
+                <a href="#"><img src="assets/images/logo_03.png" alt="atis logo"></a>
+                <div class="nav-top-righ">
+                    <ul class="flex-container">
+                        <li><a href="#">Flight</a></li>
+                        <li><a href="#recomended-hotels">Hotels</a></li>
+                        <li><a href="#recomended-places">Explore</a></li>
+                        <li><a href="#">Restraunts</a></li>
+                        <li><a href="#">Things to do</a></li>
+                        <li><a href="#">About Greece</a></li>
+                        <li><a href="#contacts" class="button">Become a Host</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </section>
+    <!-- End of Top Navigation bar -->
+
+    <!-- Start of Landing page -->
+    <section class="container-wide">
+        <div class="landing-page flex-container">
+            <div class="landing-page-content">
+                <h1><img src="assets/images/country_05.png" alt="name of country"></h1>
+                <p>WELCOME TO HEAVEN</p>
+                <a href="#recomended-places" class="button">Check offers</a>
+            </div>
+        </div>
+        <!-- Search bar -->
+        <div class="search-bar flex-container" id="search">
+            <div class="narrow">
+                <form action="" class="flex-container search-items">
+                    <div class="selection-item">
+                        <label for="host-rating">Rating</label>     
+                        <input type="text" name="city" placeholder="City">
+                    </div>
+                    <div class="selection-item">
+                        <label for="host-rating">Rating</label>    
+                        <input type="date" placeholder="CHOOSE">
+                    </div>
+                    <div class="selection-item">
+                        <label for="host-rating">Rating</label>
+                        <input type="date" name="check-out">
+                    </div>
+                    <div class="selection-item">
+                        <label for="host-rating">Rating</label>
+                        <select name="room-number" id="">
+                            <option selected="" value="rooms">Rooms+</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+                    <div class="selection-item">
+                        <label for="host-rating">Rating</label>
+                        <select name="adults-number" id="">
+                                <option value="adults">Adults+</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="more">more++</option>
+                        </select>
+                    </div>
+                    <div class="selection-item">
+                        <label for="host-rating">Rating</label>
+                        <select name="kids-selection" id="">
+                                <option value="childer">Children</option>
+                                <option value="0">Yes</option>
+                                <option value="1">No</option>
+                        </select>
+                    </div>
+                    <div class="selection-item">
+                        <label for="host-rating">Rating</label>
+                        <select id="host-rating" name="host-rating" id="">
+                                <option value="rating">Rating</option>    
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">Top rated</option>
+                        </select>
+                    </div>
+                    <button type="submit"><span>text</span></button>
+                </form>
+            </div>
+        </div>
+        <!-- Search bar end -->
+    </section>
+<!-- End of landing page -->
+
+<!-- Start of  Places recomendations page -->
+    <section class="container-wide">
+        <header class="recomended-dest-header">
+            <div class="narrow flex-container">
+                <h2 class="flex-container">MOST POPULAR PLACES</h2>
+            </div>
+        </header>
+        <!-- Start of images -->
+        <div class="recomended-places-imgs">
+            <section class="recomended-top flex-container" id="recomended-places">
+                <div>
+                    <div class="image-content">
+                        <img src="assets/images/thesaloniki_10.jpg" alt="thesaloniki city">
+                    </div>
+                    <div class="image-content">
+                        <img src="assets/images/halkidiki_10.jpg" alt="halkidiki city">
+                    </div>
+                </div>
+                <div class="image-content">
+                    <img src="assets/images/crete_10.jpg" alt="crete city">
+                </div>
+                <div>
+                    <div class="image-content">
+                        <img src="assets/images/athens_10.jpg" alt="athens city">
+                    </div>
+                    <div class="image-content">
+                        <img src="assets/images/mykonos_10.jpg" alt="mykonos city">
+                    </div>
+                </div>
+            </section>
+                <section class="recomended-bottom flex-container">
+                    <div class="image-content">
+                        <img src="assets/images/meteora_16.jpg" alt="mateora place">
+                    </div>
+                    <div class="image-content">
+                        <img class="image" src="assets/images/myros_beach_17.jpg" alt="myrtos place">
+                    </div>
+                </section>
+            </section>
+        </div>
+<!-- End of Places recomendations page -->
+
+<!-- Start of Hotels recomendations page -->
+    <section class="recomended-hotel" id="recomended-hotels">
+        <header class="recomended-hotel-header">
+            <div class="narrow flex-container">
+                <h2 class="flex-container">MOST POPULAR HOTELS</h2>
+            </div>
+        </header>
+        <section class="container-narow ">
+            <div class="recomended-hotel hotel flex-container">
+                <div class="column-hotel ">
+                    <img src="assets/images/blank_photo_25.jpg" alt="blank">
+                    <div class="column-hotel-bottom">
+                        <div class="column-hotel-bottom-1">
+                            <div>
+                                <p>name</p>
+                                <p>rating</p>
+                            </div>
+                            <div>
+                                <p>price</p>
+                                <p>days</p>
+                            </div>      
+                        </div>
+                        <div class="column-hotel-bottom-2"> 
+                            <a href="#" class="button">View more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column-hotel ">
+                    <img src="assets/images/blank_photo_25.jpg" alt="blank">
+                    <div class="column-hotel-bottom">
+                        <div class="column-hotel-bottom-1">
+                            <div>
+                                <p>name</p>
+                                <p>rating</p>
+                            </div>
+                            <div>
+                                <p>price</p>
+                                <p>days</p>
+                            </div>      
+                        </div>
+                        <div class="column-hotel-bottom-2"> 
+                            <a href="#" class="button">View more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column-hotel ">
+                    <img src="assets/images/blank_photo_25.jpg" alt="blank">
+                    <div class="column-hotel-bottom">
+                        <div class="column-hotel-bottom-1">
+                            <div>
+                                <p>name</p>
+                                <p>rating</p>
+                            </div>
+                            <div>
+                                <p>price</p>
+                                <p>days</p>
+                            </div>      
+                        </div>
+                        <div class="column-hotel-bottom-2"> 
+                            <a href="#" class="button">View more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column-hotel ">
+                    <img src="assets/images/blank_photo_25.jpg" alt="blank">
+                    <div class="column-hotel-bottom">
+                        <div class="column-hotel-bottom-1">
+                            <div>
+                                <p>name</p>
+                                <p>rating</p>
+                            </div>
+                            <div>
+                                <p>price</p>
+                                <p>days</p>
+                            </div>      
+                        </div>
+                        <div class="column-hotel-bottom-2"> 
+                            <a href="#" class="button">View more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column-hotel ">
+                    <img src="assets/images/blank_photo_25.jpg" alt="blank">
+                    <div class="column-hotel-bottom">
+                        <div class="column-hotel-bottom-1">
+                            <div>
+                                <p>name</p>
+                                <p>rating</p>
+                            </div>
+                            <div>
+                                <p>price</p>
+                                <p>days</p>
+                            </div>      
+                        </div>
+                        <div class="column-hotel-bottom-2"> 
+                            <a href="#" class="button">View more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column-hotel ">
+                    <img src="assets/images/blank_photo_25.jpg" alt="blank">
+                    <div class="column-hotel-bottom">
+                        <div class="column-hotel-bottom-1">
+                            <div>
+                                <p>name</p>
+                                <p>rating</p>
+                            </div>
+                            <div>
+                                <p>price</p>
+                                <p>days</p>
+                            </div>      
+                        </div>
+                        <div class="column-hotel-bottom-2"> 
+                            <a href="#" class="button">View more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column-hotel ">
+                    <img src="assets/images/blank_photo_25.jpg" alt="blank">
+                    <div class="column-hotel-bottom">
+                        <div class="column-hotel-bottom-1">
+                            <div>
+                                <p>name</p>
+                                <p>rating</p>
+                            </div>
+                            <div>
+                                <p>price</p>
+                                <p>days</p>
+                            </div>      
+                        </div>
+                        <div class="column-hotel-bottom-2"> 
+                            <a href="#" class="button">View more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column-hotel ">
+                    <img src="assets/images/blank_photo_25.jpg" alt="blank">
+                    <div class="column-hotel-bottom">
+                        <div class="column-hotel-bottom-1">
+                            <div>
+                                <p>name</p>
+                                <p>rating</p>
+                            </div>
+                            <div>
+                                <p>price</p>
+                                <p>days</p>
+                            </div>      
+                        </div>
+                        <div class="column-hotel-bottom-2"> 
+                            <a href="#" class="button">View more</a>
+                        </div>
+                    </div>
+                </div>
+                   
+            </div>
+        </section>
+        <footer class="recomended-hotel-footer flex-container">
+            <div class="narrow flex-container">
+                <h2><a href="#">VIEW ALL OFFERS</a></h2>
+            </div>
+        </footer>
+    </section>
+<!-- End of hotel recomendation -->
+
+<!-- Start of ADS -->
+    <section class="advertisments" id="advertisments">
+        <div class="ads-box">
+            <img src="assets/images/slider_image1_10.jpg" alt="advertisment">
+            <button id="scroll-left">left</button>
+            <button id="scroll-right">right</button>
+        </div>
+    </section>
+<!-- End of ADS -->
+
+<!-- Start of footer -->
+    <section>
+        <footer class="landing-footer flex-container">
+            <div class="narrow flex-container footer-content">
+                <img src="assets/images/logo_03.png" alt="footer logo">
+                <p>Copyrights</p>
+            </div>
+        </footer>
+    </section>
+</body>
+</html>

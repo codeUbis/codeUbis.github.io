@@ -1,0 +1,363 @@
+// Variables
+$mainColor: #017dfb;
+$headerColor: #697899;
+
+// Reset
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif; 
+    a{
+        text-decoration: none;
+        color:  $headerColor;
+    }
+}
+// Containers
+.flex{
+    display: flex;
+}
+.narrow{
+    max-width: 1600px;
+}
+// Styling
+.button{
+    padding: 15px 40px;
+    border-radius: 100px;
+    color: $mainColor;
+    background-color: #fff;
+}
+header{
+    justify-content: center;
+    margin: 0 auto;
+    padding: 60px;
+    color: $headerColor;
+    h2{
+        margin: 0;
+        font-size: 1rem;
+    }    
+}
+
+// Navbar container
+.navbar-container{
+    margin: 0 auto;
+    nav{
+        margin-top: 90px;
+        width: 100%;
+    }
+    div{
+        justify-content: space-between;
+        align-items: center;
+        width: 50%;
+    }
+    a{
+        font-size: 1rem;
+    }
+    a:hover{
+        color: $mainColor;
+    }
+    .button{
+        color: $mainColor;
+        -webkit-box-shadow: 0px 0px 65px 0px rgba(1,125,251,0.25);
+        -moz-box-shadow: 0px 0px 65px 0px rgba(1,125,251,0.25);
+        box-shadow: 0px 0px 65px 0px rgba(1,125,251,0.25);
+    }
+}
+
+//Landing container 
+.landing-container{
+    width: 100%;
+    max-width: 1940px;
+    margin: 0 auto;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/landing_02.jpg);
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+    h1{
+        margin: 50px 0;
+        color: $mainColor;
+        font-size: 1rem;
+    }
+    img{
+        width: 30%;
+    }
+}
+
+// Searchbar container
+.searchbar-container{
+    margin: 0 auto;
+    max-width: 1940px;
+    background-color: $mainColor;
+    justify-content: space-between;
+
+    .searchbar-selections{
+        width: 100%;
+        margin: 0 auto;
+        padding: 60px;
+        justify-content: space-between;
+    }
+    .searchbar-item{
+        flex-direction: column;
+        justify-content: center;
+        color: #fff;
+    }
+    // Input styling
+    input{
+        background: transparent;
+        border: none;
+        color: #fff;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+        font-size: 18px;
+    }
+    input:focus{
+        outline-color: transparent;
+        outline-style: none;
+    }
+    input::placeholder{
+        color: #fff;
+    }
+    .button{
+        padding: 15px;
+    }
+    select{
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid rgba(255,255,255,0.4);
+        border-radius: 0;
+        -webkit-appearance: none;
+        color: #fff;
+        font-size: 18px;
+        color: transparent;
+
+    }
+    label i{
+        padding: 0 10px 0 0;
+        color: rgba(255,255,255,0.4);
+    }
+            /* Removes the clear button from date inputs */
+            input[type=date]::-webkit-clear-button {
+                display: none;
+            }
+            /* Removes the spin button */
+            input[type=date]::-webkit-inner-spin-button { 
+                display: none;  
+            }
+            /* A few custom styles for date inputs */
+            input[type=date] {
+                appearance: none;
+                -webkit-appearance: none;
+                font-size: 18px;
+                background: transparent;
+                color: transparent;
+            }
+            input[type=date], focus {
+                color: transparent;
+                box-shadow: none;
+                -webkit-box-shadow: none;
+                -moz-box-shadow: none;
+                cursor: pointer;
+            }
+}
+
+// Most recomended places Container
+.recomended-places{
+    img{
+        display: block;
+        width: 100%;
+    }
+    // Hover effect
+    a{
+        position: relative;
+        display: block;
+    }
+    a:hover::after{
+        position: absolute;
+        content: "";
+        background-color: rgba(1,125,251,0.6);
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        bottom: 0;
+        
+    }
+    .recomended-places-content{
+        flex-direction: column;
+        align-items: center;
+    }
+    .places-top-left,
+    .places-top-right {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .places-top-right,
+    .places-top-center,
+    .places-top-left,
+    .places-bottom div{
+        margin: 10px;
+        
+    }
+    .place{
+        position: relative;
+        .container{
+            h3{
+                position: absolute;
+                bottom: 11%;
+                left: 5%;
+                margin: 0;
+                color: #fff;
+                font-size: 1.75em;
+                z-index: 2;
+            }
+            .inner{
+                display: none;
+            }
+        }
+    }
+    .place:hover{
+        .container{
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: absolute;
+            top: 0;
+            z-index: 3;
+            h3{
+                margin-bottom: 5%;
+                position: unset;
+                font-size: 2em;
+            }
+            .inner {
+                width: 60%;
+                justify-content: space-between;
+                display: flex;
+            }
+        }
+    }
+}
+.fancybox-slide--iframe .fancybox-content{
+    border-radius: 10px;
+    width: 70%;
+}
+.fancybox-iframe{
+    border-radius: 10px;
+}
+
+// Recomended Hotels
+.recomended-hotels{
+    max-width: 1940px;
+    margin: 0 auto;
+    .hotel{
+        flex-direction: column; 
+        max-width: 25%;
+        padding: 15px;
+        .button{
+            -webkit-box-shadow: 0px 0px 65px 0px rgba(0,0,0,0.25);
+            -moz-box-shadow: 0px 0px 65px 0px rgba(0,0,0,0.25);
+            box-shadow: 0px 0px 65px 0px rgba(0,0,0,0.25);
+        }
+    }
+}
+.recomended-hotels-content{
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    img{
+        width: 100%;
+    }
+}
+.hotel-bottom{
+    justify-content: space-between;
+    padding: 30px 30px 0;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 0px 100px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 0px 100px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 100px 0px rgba(0,0,0,0.1);
+    p{
+        margin: 0;
+        padding-bottom: 25px;
+    }
+}
+.hotel-bottom-more{
+    margin: 0 auto;
+    justify-content: center;
+    transform: translateY(-50%);
+}
+.more-offers{
+    justify-content: center;
+    margin: 0 auto;
+    padding: 60px;
+    .button{
+        color: #c5c5c5;
+        border: 1px solid #c5c5c5;
+    }
+}
+
+// Slider
+.swiper-container {
+    max-width: 1940px;;
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide{
+    position: relative;
+    img{
+        display: block;
+        width: 100%;
+    }
+    .slides-text{
+        text-align: center;
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 770px;
+        left: 50%;
+        h3{
+            margin-top: 0;
+            font-size: 4em;
+            span{
+                color: #0dcfff;
+            }
+        }
+        .author{
+            font-weight: 800;
+        }
+    }
+}
+.swiper-button-prev{
+    left: 9%;
+}
+.swiper-button-next{
+    right: 9%;
+}
+// Map
+.map{
+    iframe{
+        width: 100%;
+    }
+}
+// Footer
+footer{
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: 60px;
+    color: #bdbdbd;
+    img{
+        width: min-content;
+        filter: grayscale(1);  
+
+    }
+}
