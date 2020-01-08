@@ -29,13 +29,6 @@ body a {
   max-width: 1600px;
 }
 
-.button {
-  padding: 15px 40px;
-  border-radius: 100px;
-  color: #017dfb;
-  background-color: #fff;
-}
-
 header {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -60,6 +53,7 @@ header h2 {
 }
 
 .navbar-container div {
+  margin: 0;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -69,8 +63,16 @@ header h2 {
   width: 50%;
 }
 
+.navbar-container ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .navbar-container a {
-  font-size: 1rem;
+  padding: 10px;
+  white-space: nowrap;
+  font-size: 1em;
 }
 
 .navbar-container a:hover {
@@ -82,6 +84,27 @@ header h2 {
   -webkit-box-shadow: 0px 0px 65px 0px rgba(1, 125, 251, 0.25);
   -moz-box-shadow: 0px 0px 65px 0px rgba(1, 125, 251, 0.25);
   box-shadow: 0px 0px 65px 0px rgba(1, 125, 251, 0.25);
+}
+
+.navbar-container .navbar-toggle {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  color: #017dfb;
+  font-size: 24px;
+}
+
+.navbar-container span {
+  display: none;
+}
+
+.button,
+a.button {
+  padding: 15px 40px;
+  border-radius: 100px;
+  color: #017dfb;
+  background-color: #fff;
 }
 
 .landing-container {
@@ -121,9 +144,8 @@ header h2 {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  /* Removes the clear button from date inputs */
-  /* Removes the spin button */
-  /* A few custom styles for date inputs */
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .searchbar-container .searchbar-selections {
@@ -136,88 +158,57 @@ header h2 {
 }
 
 .searchbar-container .searchbar-item {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  color: #fff;
+  position: relative;
+  width: 50%;
+  height: 50px;
 }
 
-.searchbar-container input {
-  background: transparent;
+.searchbar-container .searchbar-item input, .searchbar-container .searchbar-itemselect {
+  width: 100%;
+  height: 100%;
+  padding: 20px 0 0;
   border: none;
-  color: #fff;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-  font-size: 18px;
+  background: none;
+  outline: none;
 }
 
-.searchbar-container input:focus {
-  outline-color: transparent;
-  outline-style: none;
+.searchbar-container .searchbar-item label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid white;
 }
 
-.searchbar-container input::-webkit-input-placeholder {
-  color: #fff;
+.searchbar-container .searchbar-item label::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-bottom: 3px solid blue;
+  bottom: -1px;
+  left: 0;
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
 }
 
-.searchbar-container input:-ms-input-placeholder {
-  color: #fff;
+.searchbar-container .searchbar-item .content-name {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-.searchbar-container input::-ms-input-placeholder {
-  color: #fff;
-}
-
-.searchbar-container input::placeholder {
-  color: #fff;
-}
-
-.searchbar-container .button {
-  padding: 15px;
-}
-
-.searchbar-container select {
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-  border-radius: 0;
-  -webkit-appearance: none;
-  color: #fff;
-  font-size: 18px;
-  color: transparent;
-}
-
-.searchbar-container label i {
-  padding: 0 10px 0 0;
-  color: rgba(255, 255, 255, 0.4);
-}
-
-.searchbar-container input[type=date]::-webkit-clear-button {
-  display: none;
-}
-
-.searchbar-container input[type=date]::-webkit-inner-spin-button {
-  display: none;
-}
-
-.searchbar-container input[type=date] {
-  -moz-appearance: none;
-  appearance: none;
-  -webkit-appearance: none;
-  font-size: 18px;
-  background: transparent;
-  color: transparent;
-}
-
-.searchbar-container input[type=date], .searchbar-container focus {
-  color: transparent;
-  box-shadow: none;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  cursor: pointer;
+.searchbar-container .searchbar-item input:focus + .label-name + .content-name,
+.searchbar-container .searchbar-item input:valid + .label-name .content-name {
+  -webkit-transform: translateY(-150%);
+  -ms-transform: translateY(-150%);
+  transform: translateY(-150%);
 }
 
 .recomended-places img {
@@ -226,14 +217,25 @@ header h2 {
 }
 
 .recomended-places a {
+  overflow: hidden;
   position: relative;
   display: block;
+}
+
+.recomended-places a:hover img {
+  -webkit-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
+  -webkit-transform: scale(1.15);
+  -ms-transform: scale(1.15);
+  transform: scale(1.15);
 }
 
 .recomended-places a:hover::after {
   position: absolute;
   content: "";
   background-color: rgba(1, 125, 251, 0.6);
+  opacity: 1;
   z-index: 0;
   width: 100%;
   height: 100%;
@@ -262,18 +264,12 @@ header h2 {
   justify-content: space-between;
 }
 
-.recomended-places .places-top-right,
-.recomended-places .places-top-center,
-.recomended-places .places-top-left,
-.recomended-places .places-bottom div {
-  margin: 10px;
-}
-
-.recomended-places .place {
+.place {
+  padding: 10px;
   position: relative;
 }
 
-.recomended-places .place .container h3 {
+.place .container h3 {
   position: absolute;
   bottom: 11%;
   left: 5%;
@@ -283,11 +279,11 @@ header h2 {
   z-index: 2;
 }
 
-.recomended-places .place .container .inner {
+.place .container .inner {
   display: none;
 }
 
-.recomended-places .place:hover .container {
+.place:hover .container {
   width: 100%;
   height: 100%;
   -webkit-box-pack: center;
@@ -305,20 +301,28 @@ header h2 {
   z-index: 3;
 }
 
-.recomended-places .place:hover .container h3 {
+.place:hover .container h3 {
   margin-bottom: 5%;
   position: unset;
   font-size: 2em;
 }
 
-.recomended-places .place:hover .container .inner {
-  width: 60%;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+.place:hover .container .inner {
+  width: 250px;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background-color: none;
+}
+
+.place:hover .container .inner-btn.button {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  margin: 0 10px;
 }
 
 .fancybox-slide--iframe .fancybox-content {
@@ -348,6 +352,19 @@ header h2 {
   -webkit-box-shadow: 0px 0px 65px 0px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0px 0px 65px 0px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 0px 65px 0px rgba(0, 0, 0, 0.25);
+}
+
+.recomended-hotels .hotel .hotel-top {
+  overflow: hidden;
+}
+
+.recomended-hotels .hotel:hover img {
+  -webkit-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
+  -webkit-transform: scale(1.15);
+  -ms-transform: scale(1.15);
+  transform: scale(1.15);
 }
 
 .recomended-hotels-content {
@@ -450,8 +467,8 @@ header h2 {
   right: 9%;
 }
 
-.map iframe {
-  width: 100%;
+#map {
+  height: 40vh;
 }
 
 footer {
@@ -473,6 +490,257 @@ footer img {
   width: min-content;
   -webkit-filter: grayscale(1);
   filter: grayscale(1);
+}
+
+.contact-container {
+  margin: 0 auto;
+  width: 90%;
+  height: 100%;
+  background-color: peachpuff;
+  border-radius: 7px 7px 0 0;
+}
+
+.contact-container .inputsForm {
+  -webkit-transition: ease 1s;
+  -o-transition: ease 1s;
+  transition: ease 1s;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.contact-container .inputsForm input,
+.contact-container .inputsForm textarea {
+  width: 50%;
+  margin: 20px;
+  padding: 15px;
+  border: none;
+  border-radius: 7px;
+  resize: none;
+  outline: none;
+}
+
+.contact-container h4 {
+  text-transform: uppercase;
+}
+
+.contact-container .contact-content {
+  width: 100%;
+  height: 100%;
+  background-color: rosybrown;
+  border-radius: 7px 7px 0 0;
+}
+
+.contact-container .contact-content .contact-item {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+.contact-container .contact-content .contact-item i {
+  font-size: 2em;
+}
+
+.contact-container .contact-content .contact-item i:hover {
+  color: #fff;
+}
+
+.inputsForm.formDisplay {
+  -webkit-transition: ease 1s;
+  -o-transition: ease 1s;
+  transition: ease 1s;
+  height: 50vh;
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1400px) {
+  .places-top .button,
+  .places-bottom .button {
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 12px;
+  }
+  .places-top .button,
+  .places-bottom .button {
+    padding: 10px 20px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+  html {
+    font-size: 9px;
+  }
+  .recomended-hotels-content {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .recomended-hotels .hotel {
+    max-width: 33.3333%;
+  }
+  .places-top {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  .places-top .places-top-left,
+  .places-top .places-top-center {
+    max-width: 50%;
+  }
+  .places-top .places-top-left a,
+  .places-top .places-top-center a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .places-top .places-top-left .button,
+  .places-top .places-top-center .button {
+    padding: 10px 15px;
+  }
+  .places-top .places-top-right {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  .places-top .places-top-right .button {
+    padding: 10px 15px;
+  }
+  .places-bottom {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  .places-bottom .button {
+    padding: 10px 15px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (max-width: 768px) {
+  .navbar-container {
+    -webkit-transition: 1s ease;
+    -o-transition: 1s ease;
+    transition: 1s ease;
+    overflow: hidden;
+    height: 0px;
+  }
+  .navbar-container nav {
+    margin: 20px 0 0;
+  }
+  .navbar-container span {
+    display: block;
+  }
+  .navbar-container .main-nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    display: block;
+  }
+  .navbar-container .main-nav div {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .navbar-container .main-nav ul {
+    padding: 0;
+    margin: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+  }
+  .navbar-container .main-nav li {
+    padding: 20px;
+  }
+  .navbar-container .main-nav a {
+    font-size: 1.5em;
+  }
+  .active {
+    -webkit-transition: 1s ease;
+    -o-transition: 1s ease;
+    transition: 1s ease;
+    overflow: hidden;
+    height: 80vh;
+  }
+  .searchbar-container .searchbar-selections {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin: 0;
+    padding: 30px 10px 20px;
+  }
+  .recomended-hotels .hotel {
+    max-width: 50%;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+  .recomended-hotels .hotel {
+    max-width: 100%;
+  }
+  .places-top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .places-top .places-top-left,
+  .places-top .places-top-center,
+  .places-top .places-top-right {
+    display: block;
+    max-width: 100%;
+  }
+  .places-top .places-top-left a,
+  .places-top .places-top-center a,
+  .places-top .places-top-right a {
+    width: 100%;
+  }
+  .places-top .places-top-left .button,
+  .places-top .places-top-center .button,
+  .places-top .places-top-right .button {
+    padding: 10px 20px;
+  }
+  .places-bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
 }
 
 /*# sourceMappingURL=project2.css.map */

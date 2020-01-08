@@ -1,0 +1,151 @@
+// Responsive display 
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1400px){
+    .places-top,
+    .places-bottom{
+        .button{
+            padding: 10px 20px;
+        }
+    }
+}
+@media (max-width: 1200px) {  
+    html{
+        font-size: 12px;
+    }
+    .places-top,
+    .places-bottom{
+        .button{
+            padding: 10px 20px;
+        }
+    }
+}
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px) { 
+    html{
+        font-size: 9px;
+    }
+
+// RECOMENDED HOTELS CONTENT=================================
+    .recomended-hotels-content{
+        justify-content: center;
+    }
+    .recomended-hotels{
+        .hotel{
+            max-width: 33.3333%;
+        }
+    }
+// RECOMENDED PLACES CONTENT=================================
+    .places-top{
+        flex-wrap: wrap;
+        flex-direction: row;
+        .places-top-left,
+        .places-top-center{
+            max-width: 50%;
+            a{
+                display: flex;
+            }
+            .button{
+                padding: 10px 15px;
+            }
+        }
+        .places-top-right{
+            flex-direction: row;
+            .button{
+                padding: 10px 15px;
+            }
+        }
+    }
+    .places-bottom{
+        flex-direction: row;
+        .button{
+            padding: 10px 15px;
+        }
+    }
+}
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (max-width: 768px) {  
+// NAVBAR=================================
+.navbar-container{
+    transition: 1s ease;
+    overflow: hidden;
+    height: 0px;
+    nav{
+        margin: 20px 0 0;
+    }
+    span{
+        display: block;
+    }
+    .main-nav{
+        flex-direction: column;
+        width: 100%;
+        display: block;
+        div{
+            justify-content: center;
+            width: 100%;
+        }
+        ul{
+            padding:0;
+            margin:0;
+            flex-direction: column;
+            text-align: center;
+            justify-content: space-evenly;
+        }
+        li{
+            padding: 20px;
+        }
+        a{
+            font-size: 1.5em;
+        } 
+    }
+}
+.active{
+    transition: 1s ease;
+    overflow: hidden;
+    height: 80vh;
+}
+// SEARVHBAR=================================
+.searchbar-container{
+    .searchbar-selections{
+        flex-direction: column;
+        margin:0;
+        padding: 30px 10px 20px;
+    }
+}
+// RECOMENDED HOTELS CONTENT=================================
+    .recomended-hotels{
+        .hotel{
+            max-width: 50%;
+        }
+    }
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) { 
+
+// RECOMENDED HOTELS CONTENT=================================
+   .recomended-hotels{
+       .hotel{
+           max-width: 100%
+       }
+   }
+// RECOMENDED PLACES CONTENT=================================
+   .places-top{
+    flex-direction: column;
+    .places-top-left,
+    .places-top-center,
+    .places-top-right{
+        display: block;
+        max-width: 100%;
+        a{
+            width: 100%;
+            }
+        .button{
+            padding: 10px 20px;
+        }
+        }
+    }
+    .places-bottom{
+        flex-direction: column;
+    }
+}
+
