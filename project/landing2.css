@@ -1,0 +1,26 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+body{
+    margin: 0 auto;
+    
+}
+
+/* Containers */
+section{
+    display: flex;
+}
+.container-wide{
+    background-image: url(../project/assets/images/landing_02.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+.container-narrow{
+    max-width: 800px;
+}
+.flex{
+    display: flex;
+}

@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Molle:400i|Roboto:100,400,700,900&display=swap&subset=latin-ext" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/368f7e606b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css"><!-- Swiper -->
+    <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css"><!-- Fancybox -->
+    <link rel="stylesheet" href="assets/css/project2.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- Start of Navigation bar -->
+    <section id="menu" class="navbar-container narrow flex">
+        <span class="navbar-toggle" id="navbar-toggle">
+            <i class="fas fa-bars"></i>
+        </span>
+        <nav class="main-nav flex">
+            <div class="flex">
+                <img src="assets/images/logo_03.png" alt="logo">
+            </div>
+            <ul class="nav-links flex">
+                <li><a href="#recomended-hotels">Hotels</a></li>
+                <li><a href="#recomended-places">Explore</a></li>
+                <li><a href="#">Flight</a></li>
+                <li><a href="#">Restraunts</a></li>
+                <li><a href="#">Things to do</a></li>
+                <li><a href="#contacts">Contacts</a></li>
+                <li><a href="#contacts" class="button">Become a Host</a></li>
+            </ul>
+        </nav>
+    </section>
+    
+    <!-- Start of Landing page -->
+    <section class="landing-container flex">
+        <img src="assets/images/country_05.png" alt="greece">
+        <h1>WELCOME TO HEAVEN</h1>
+        <a href="#" class="button">Check offer</a>
+    </section>
+    
+    <!-- Start of Search bar -->
+    <section class="searchbar-container flex">
+        <form class="searchbar-selections flex narrow">    
+            <div class="searchbar-item flex">
+                <input id="city" type="text" name="city">
+                <label for="#city" class="label-name"></label>
+                    <span class="content-name">City</span>
+                </label>
+            </div>
+            <div class="searchbar-item flex">
+                <label for="#checkin"><i class="far fa-calendar-alt"></i>Check In</label>
+                <input id="checkin" type="date">
+            </div>
+            <div class="searchbar-item flex">
+                <label for="#checkout"><i class="far fa-calendar-alt"></i>Check Out</label>
+                <input id="checkout" type="date">
+            </div>
+            <div class="searchbar-item flex">
+                <label for="#rooms"><i class="fas fa-home"></i>Rooms</label>
+                <select name="rooms" id="rooms">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+            <div class="searchbar-item flex">
+                <label for="#adults"><i class="fas fa-user"></i>Adults</label>
+                <select name="adults" id="adults">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+            <div class="searchbar-item flex">
+                <label for="#children"><i class="far fa-smile-beam"></i>Children</label>
+                <select name="children" id="children">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+            <div class="searchbar-item flex">
+                <label for="#stars"><i class="far fa-star"></i>Stars</label>
+                <select name="stars" id="stars">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="searchbar-item flex">
+                <button class="button"><i class="fas fa-search"></i></button>
+            </div>        
+        </form>
+    </section>
+   
+    <!-- Start of Recomended places -->
+    <section class="recomended-places">
+        <header class="flex narrow">
+            <h2>MOST POPULAR PLACES</h2>
+        </header>
+        <div class="recomended-places-content flex">
+            <!-- Images top -->
+            <div id="recomended-places" class="places-top flex">
+                <!-- Left -->
+                <div class="flex places-top-left">
+                    <div class="place flex">
+                        <a href="https://en.wikipedia.org/wiki/thesaloniki" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false}}'>
+                            <img src="assets/images/thesaloniki_10.jpg" alt="thesaloniki">
+                            <div class="container flex">
+                                <h3>Thesaloniki</h3>
+                                <div class="inner">
+                                    <div class="inner-btn button">Flights</div>
+                                    <div class="inner-btn button">Hotels</div>
+                                    <div class="inner-btn button">Places</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="place flex">
+                        <a href="https://en.wikipedia.org/wiki/haldiki" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false}}'>
+                            <img src="assets/images/halkidiki_10.jpg" alt="haldiki">
+                            <div class="container flex">
+                                <h3>Haldiki</h3>
+                                <div class="inner">
+                                    <div class="inner-btn button">Flights</div>
+                                    <div class="inner-btn button">Hotels</div>
+                                    <div class="inner-btn button">Places</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- Center -->
+                <div class="places-top-center flex">
+                    <div class="place flex">
+                        <a href="http://partners.api.skyscanner.net/apiservices" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false}}'>
+                            <img src="assets/images/crete_10.jpg" alt="crete">
+                            <div class="container flex">
+                                <h3>Crete</h3>
+                                <div class="inner">
+                                    <div class="inner-btn button">Flights</div>
+                                    <div class="inner-btn button">Hotels</div>
+                                    <div class="inner-btn button">Places</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- Right -->
+                <div class="flex places-top-right">
+                    <div class="place flex">
+                        <a href="https://en.wikipedia.org/wiki/athens" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false}}'>
+                            <img src="assets/images/athens_10.jpg" alt="athens">
+                            <div class="container flex">
+                                <h3>Athens</h3>
+                                <div class="inner">
+                                    <div class="inner-btn button">Flights</div>
+                                    <div class="inner-btn button">Hotels</div>
+                                    <div class="inner-btn button">Places</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="place flex">
+                        <a href="https://en.wikipedia.org/wiki/mykonos" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false}}'>
+                            <img src="assets/images/mykonos_10.jpg" alt="mykonos">
+                            <div class="container flex">
+                                <h3>Mykonos</h3>
+                                <div class="inner">
+                                    <div class="inner-btn button">Flights</div>
+                                    <div class="inner-btn button">Hotels</div>
+                                    <div class="inner-btn button">Places</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Images bottom -->
+            <div class="places-bottom flex">
+                <div class="place flex">
+                    <a href="https://en.wikipedia.org/wiki/meteora" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false}}'>
+                        <img src="assets/images/meteora_16.jpg" alt="meteora">
+                        <div class="container flex">
+                            <h3>Meteora</h3>
+                            <div class="inner">
+                                <div class="inner-btn button">Flights</div>
+                                <div class="inner-btn button">Hotels</div>
+                                <div class="inner-btn button">Places</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="place flex">
+                    <a href="https://en.wikipedia.org/wiki/myros" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false}}'>
+                        <img src="assets/images/myros_beach_17.jpg" alt="myros">
+                        <div class="container flex">
+                            <h3>Myros</h3>
+                            <div class="inner">
+                                <div class="button inner-btn ">Flights</div>
+                                <div class="button inner-btn ">Hotels</div>
+                                <div class="button inner-btn ">Places</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Start of Hotel Recomendations -->
+    <section class="recomended-hotels">
+        <header class="flex narrow">
+            <h2>MOST POPULAR HOTELS</h2>
+        </header>
+        <div class="recomended-hotels-content narrow flex">
+            
+            <!-- Content -->
+            <div id="recomended-hotels" class="hotel flex">
+                <div class="hotel-top">
+                    <img src="assets/images/hotel1.png" alt="blank">
+                </div>
+                <div class="hotel-bottom flex">
+                    <div>
+                        <p>name</p>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div>
+                        <p>price</p>
+                        <p>days</p>
+                    </div>      
+                </div>
+                <div class="hotel-bottom-more flex">
+                    <a href="" class="button">View More</a>
+                </div>
+            </div>
+            <!-- Content -->
+            <div class="hotel flex">
+                <div class="hotel-top">
+                    <img src="assets/images/hotel2.jpeg" alt="blank">
+                </div>
+                <div class="hotel-bottom flex">
+                    <div>
+                        <p>name</p>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div>
+                        <p>price</p>
+                        <p>days</p>
+                    </div>      
+                </div>
+                <div class="hotel-bottom-more flex">
+                    <a href="" class="button">View More</a>
+                </div>
+            </div>
+            <!-- Content -->
+            <div class="hotel flex">
+                <div class="hotel-top">
+                    <img src="assets/images/hotel3.jpeg" alt="blank">
+                </div>
+                <div class="hotel-bottom flex">
+                    <div>
+                        <p>name</p>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div>
+                        <p>price</p>
+                        <p>days</p>
+                    </div>      
+                </div>
+                <div class="hotel-bottom-more flex">
+                    <a href="" class="button">View More</a>
+                </div>
+            </div>
+            <!-- Content -->
+            <div class="hotel flex">
+                <div class="hotel-top">
+                    <img src="assets/images/hotel4.jpeg" alt="blank">
+                </div>
+                <div class="hotel-bottom flex">
+                    <div>
+                        <p>name</p>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div>
+                        <p>price</p>
+                        <p>days</p>
+                    </div>      
+                </div>
+                <div class="hotel-bottom-more flex">
+                    <a href="" class="button">View More</a>
+                </div>
+            </div>
+            <!-- Content -->
+            <div class="hotel flex">
+                <div class="hotel-top">
+                    <img src="assets/images/hotel5.jpeg" alt="blank">
+                </div>
+                <div class="hotel-bottom flex">
+                    <div>
+                        <p>name</p>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div>
+                        <p>price</p>
+                        <p>days</p>
+                    </div>      
+                </div>
+                <div class="hotel-bottom-more flex">
+                    <a href="" class="button">View More</a>
+                </div>
+            </div>
+            <!-- Content -->
+            <div class="hotel flex">
+                <div class="hotel-top">
+                    <img src="assets/images/hotel6.jpeg" alt="blank">
+                </div>
+                <div class="hotel-bottom flex">
+                    <div>
+                        <p>name</p>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div>
+                        <p>price</p>
+                        <p>days</p>
+                    </div>      
+                </div>
+                <div class="hotel-bottom-more flex">
+                    <a href="" class="button">View More</a>
+                </div>
+            </div>
+            <!-- Content -->
+            <div class="hotel flex">
+                <div class="hotel-top">
+                    <img src="assets/images/hotel7.jpeg" alt="blank">
+                </div>
+                <div class="hotel-bottom flex">
+                    <div>
+                        <p>name</p>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div>
+                        <p>price</p>
+                        <p>days</p>
+                    </div>      
+                </div>
+                <div class="hotel-bottom-more flex">
+                    <a href="" class="button">View More</a>
+                </div>
+            </div>
+            <!-- Content -->
+            <div class="hotel flex">
+                <div class="hotel-top">
+                    <img src="assets/images/hotel8.jpeg" alt="blank">
+                </div>
+                <div class="hotel-bottom flex">
+                    <div>
+                        <p>name</p>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div>
+                        <p>price</p>
+                        <p>days</p>
+                    </div>      
+                </div>
+                <div class="hotel-bottom-more flex">
+                    <a href="" class="button">View More</a>
+                </div>
+            </div>
+           
+        </div>
+        <div class="flex more-offers">
+            <a href="" class="button">View All Offers</a>
+        </div>
+    </section>
+    
+    <!-- Start of slider -->
+    <section>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <img src="assets/images/slider_image1_10.jpg" alt="">
+                    <div class="slides-text">
+                        <h3>And then the God said let there be a <span>Greece</span></h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste asperiores maiores cupiditate voluptate ipsum placeat, modi vitae neque nulla aliquam!</p>
+                        <p class="author">John Doe. mytravels.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination swiper-pagination-white"></div>
+            <div class="swiper-button-prev swiper-button-white"></div>
+            <div class="swiper-button-next swiper-button-white"></div>
+        </div>
+    </section>
+
+    <!-- Map -->
+    <!-- <section id="map"></section> -->
+    
+    <!-- Footer -->
+    <footer class="flex narrow">
+        <img src="assets/images/logo_03.png" alt="logo">
+        <p> &copysr; Copyright 2020. All rights reserved by Ubis</p>
+    </footer>
+    
+    
+    <section class="contact-container" id="contacts">
+        <form class="inputsForm flex" id="form">
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email adress">
+            <textarea placeholder="Message" cols="100" rows="100%"></textarea>
+            <button type="submit" class="button" onclick="contact()"> Send </button>
+        </form>
+        <div class="contact-content flex">
+            <div class="contact-item flex">
+                <h4>Email Us</h4>
+                <i class="fas fa-envelope-open-text"  onclick="contact()"></i>
+            </div>
+            <div class="contact-item flex">
+                <h4>Phone Us</h4>
+                <i class="fas fa-mobile-alt"></i>
+            </div>
+            <div class="contact-item flex">
+                <h4>LOCATE us</h4>
+                <i class="fas fa-map-marked-alt"></i>
+            </div>
+        </div>  
+    </section>
+
+    <!-- Scripts -->
+    <script src="assets/scripts/jquery.js"></script><!-- jQuery -->
+    <script src="assets/scripts/jquery.fancybox.min.js"></script><!-- Fancybox -->
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script><!-- Swiper -->
+    <script src="assets/scripts/project.js"></script>
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqaF4gLmpBBYs_DoLBkoq1HaGwA_LbRAc&callback=initMap" -->
+    <!-- async defer></script> -->
+</body>
+</html>
