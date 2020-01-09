@@ -29,6 +29,10 @@ body a {
   max-width: 1600px;
 }
 
+.display {
+  display: block;
+}
+
 header {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -44,6 +48,7 @@ header h2 {
 }
 
 .navbar-container {
+  padding: 0 20px;
   margin: 0 auto;
 }
 
@@ -146,12 +151,19 @@ a.button {
   justify-content: space-between;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  color: #fff;
+}
+
+.searchbar-container input {
+  border: none;
+  border-radius: 3px;
+  height: 100%;
 }
 
 .searchbar-container .searchbar-selections {
   width: 100%;
   margin: 0 auto;
-  padding: 60px;
+  padding: 60px 30px;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -159,56 +171,46 @@ a.button {
 
 .searchbar-container .searchbar-item {
   position: relative;
-  width: 50%;
-  height: 50px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  text-align: center;
 }
 
-.searchbar-container .searchbar-item input, .searchbar-container .searchbar-itemselect {
-  width: 100%;
-  height: 100%;
-  padding: 20px 0 0;
-  border: none;
-  background: none;
+.searchbar-container .searchbar-item i {
+  padding: 15px;
+}
+
+.searchbar-container .searchbar-item input {
+  text-align: center;
+  color: #fff;
+  background-color: red;
   outline: none;
 }
 
-.searchbar-container .searchbar-item label {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  pointer-events: none;
-  border-bottom: 1px solid white;
+.searchbar-container .select2-selection.select2-selection--single {
+  height: auto;
+  padding: 5px;
+  background-color: blue;
+  border: none;
+  color: inherit;
 }
 
-.searchbar-container .searchbar-item label::after {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  border-bottom: 3px solid blue;
-  bottom: -1px;
-  left: 0;
-  -webkit-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
+.searchbar-container .select2-container--default .select2-selection--single .select2-selection__rendered {
+  color: inherit;
 }
 
-.searchbar-container .searchbar-item .content-name {
-  position: absolute;
-  bottom: 5px;
-  left: 0;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+.searchbar-container .select2-container--default .select2-selection--single .select2-selection__arrow b {
+  border-color: #fff transparent transparent transparent;
 }
 
-.searchbar-container .searchbar-item input:focus + .label-name + .content-name,
-.searchbar-container .searchbar-item input:valid + .label-name .content-name {
-  -webkit-transform: translateY(-150%);
-  -ms-transform: translateY(-150%);
-  transform: translateY(-150%);
+.searchbar-container .button {
+  width: auto;
+  padding: 10px;
 }
 
 .recomended-places img {
@@ -365,6 +367,13 @@ a.button {
   -webkit-transform: scale(1.15);
   -ms-transform: scale(1.15);
   transform: scale(1.15);
+}
+
+.recomended-hotels .hide {
+  height: 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
 }
 
 .recomended-hotels-content {
@@ -561,10 +570,10 @@ footer img {
   color: #fff;
 }
 
-.inputsForm.formDisplay {
-  -webkit-transition: ease 1s;
-  -o-transition: ease 1s;
-  transition: ease 1s;
+.inputsForm.contactsDisplay {
+  -webkit-transition: ease .1s;
+  -o-transition: ease .1s;
+  transition: ease .1s;
   height: 50vh;
 }
 
@@ -642,13 +651,17 @@ footer img {
 }
 
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
+  header h2 {
+    font-size: 1.5rem;
+  }
   .navbar-container {
     -webkit-transition: 1s ease;
     -o-transition: 1s ease;
     transition: 1s ease;
     overflow: hidden;
     height: 0px;
+    max-height: 100%;
   }
   .navbar-container nav {
     margin: 20px 0 0;
@@ -693,15 +706,81 @@ footer img {
     -o-transition: 1s ease;
     transition: 1s ease;
     overflow: hidden;
-    height: 80vh;
+    height: 200vh;
   }
   .searchbar-container .searchbar-selections {
+    -webkit-transition: 1s ease;
+    -o-transition: 1s ease;
+    transition: 1s ease;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    overflow: hidden;
     margin: 0;
-    padding: 30px 10px 20px;
+    max-height: 0;
+    padding: 0;
+  }
+  .searchbar-container .searchbar-selections .searchbar-item {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+  }
+  .searchbar-container .searchbar-selections .searchbar-item input {
+    width: 100%;
+    padding: 10.75px;
+    font-size: 1.5rem;
+  }
+  .searchbar-container .searchbar-selections .searchbar-item .button {
+    -webkit-box-align: f;
+    -ms-flex-align: f;
+    align-items: f;
+    margin: 5% 10% 0;
+    padding: 0;
+  }
+  .searchbar-container .searchbar-selections .searchbar-item label {
+    text-align: start;
+    display: block;
+    width: 60%;
+    font-size: 1.5rem;
+  }
+  .searchbar-container .select2-selection__rendered {
+    padding: 0px;
+    font-size: 1.5rem;
+  }
+  .searchbar-container .search-arrow {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+    transform: translateY(50%);
+    width: 100%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-size: 5rem;
+  }
+  .searchbar-container .search-arrow i {
+    -webkit-transition: 1s ease;
+    -o-transition: 1s ease;
+    transition: 1s ease;
+    color: burlywood;
+  }
+  .searchbar-container .pressed {
+    -webkit-transition: 1s ease;
+    -o-transition: 1s ease;
+    transition: 1s ease;
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  .searchbar-container .search-burger {
+    -webkit-transition: 1s ease;
+    -o-transition: 1s ease;
+    transition: 1s ease;
+    max-height: 200vh;
+    padding: 10px 10px 0;
   }
   .recomended-hotels .hotel {
     max-width: 50%;
