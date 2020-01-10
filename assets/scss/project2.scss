@@ -1,6 +1,13 @@
 // Variables
-$mainColor: #017dfb;
-$headerColor: #697899;
+$mainColor: black;
+$headerColor: #c19a66;
+$headerColorRGBA: rgba(193, 154,102, 0.5);
+$headerColorHover: #b08c5c;
+$fontColorHover: #fff;
+$hoverColorPlaces: green;
+$backgroundColorDark: #101117;
+$backgroundColorLight:#434343;
+$maxWidthPage: 1940px;
 
 // Reset
 *,
@@ -14,6 +21,7 @@ html{
 body{
     margin: 0 auto;
     font-family: 'Roboto', sans-serif; 
+    background-image: linear-gradient(to right, #434343 0%, $backgroundColorDark 100%);
     a{
         text-decoration: none;
         color:  $headerColor;
@@ -44,20 +52,22 @@ header{
 
 // Navbar container
 .navbar-container{
-    padding: 0 20px;
     margin: 0 auto;
+    padding: 10px 20px;
     nav{
-        margin-top: 90px;
-        width: 100%;
+        width: 100%;   
     }
     div{
         margin: 0;
         justify-content: space-between;
         align-items: center;
-        width: 50%;
+        width: 100%;
     }
     ul{
         list-style: none;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
         margin: 0;
         padding: 0;
     }
@@ -67,75 +77,90 @@ header{
         font-size: 1em;
     }
     a:hover{
-        color: $mainColor;
+        color: $fontColorHover;
     }
     .button{
         color: $mainColor;
-        -webkit-box-shadow: 0px 0px 65px 0px rgba(1,125,251,0.25);
-        -moz-box-shadow: 0px 0px 65px 0px rgba(1,125,251,0.25);
-        box-shadow: 0px 0px 65px 0px rgba(1,125,251,0.25);
+        -webkit-box-shadow: 0px 0px 65px 0px rgba(255,255,255,0.25);
+        -moz-box-shadow: 0px 0px 65px 0px rgba(255,255,255,0.25);
+        box-shadow: 0px 0px 65px 0px rgba(255,255,251,0.25);
     }
     .navbar-toggle {
         position: absolute;
         top: 10px;
         right: 20px;
         cursor: pointer; 
-        color: $mainColor;
+        color: $headerColor;
         font-size: 24px;
     }
     span{
         display: none;
     }
 }
-
+// BUTTON
 .button,
 a.button{
     padding: 15px 40px;
     border-radius: 100px;
     color: $mainColor;
-    background-color: #fff;
+    background-color: $headerColor;
+    border-color: $mainColor;
+    outline: none;
+    &:hover{
+        color: $fontColorHover;
+        background-color: $headerColorHover;
+        -webkit-box-shadow: inset 0px 0px 50px 1px rgba(0,0,0,0.25);
+        -moz-box-shadow: inset 0px 0px 50px 1px rgba(0,0,0,0.25);
+        box-shadow: inset 0px 0px 50px 1px rgba(0,0,0,0.25);
+    }
 }
 
 //Landing container 
 .landing-container{
     width: 100%;
-    max-width: 1940px;
+    max-width: $maxWidthPage;
     margin: 0 auto;
-    height: 100vh;
+    min-height: 100vh;
     justify-content: center;
     align-items: center;
-    background-image: url(../images/landing_02.jpg);
+    background-image: url(../images/landing_03.jpg);
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     flex-direction: column;
     h1{
         margin: 50px 0;
-        color: $mainColor;
+        color: $headerColor;
         font-size: 1rem;
     }
     img{
         width: 30%;
     }
 }
-
 // Searchbar container
 .searchbar-container{
     margin: 0 auto;
-    max-width: 1940px;
-    background-color: $mainColor;
+    max-width: $maxWidthPage;
+    background-color: $backgroundColorDark;
     justify-content: space-between;
     flex-wrap: wrap;
-    color: #fff;
+    color: $headerColor;
     input{
         border: none;
         border-radius: 3px;
         height: 100%;
     }
+    .search-arrow{
+        img{
+            display: none;
+        }
+    }
 
     .searchbar-selections{
         width: 100%;
         margin: 0 auto;
-        padding: 60px 30px;
+        padding: 20px 30px;
         justify-content: space-between;
     }
    // Input styling
@@ -149,15 +174,15 @@ a.button{
         }
         input{
             text-align: center;
-            color: #fff;
-            background-color: red;
+            color: $headerColor;
+            background-color: $backgroundColorLight;
             outline: none;
         }
     }
     .select2-selection.select2-selection--single{
         height: auto;
         padding: 5px;
-        background-color: blue;
+        background-color: $backgroundColorLight;
         border: none;
         color:  inherit;
     }
@@ -165,7 +190,7 @@ a.button{
         color: inherit;
     }
     .select2-container--default .select2-selection--single .select2-selection__arrow b{
-        border-color:#fff transparent transparent transparent;
+        border-color:$headerColor transparent transparent transparent;
     }
     .button{
         width: auto;
@@ -176,14 +201,17 @@ a.button{
 
 // Most recomended places Container
 .recomended-places{
+    max-width: $maxWidthPage;
+    margin: 0 auto;
     img{
         display: block;
+        object-fit: cover;
         width: 100%;
     }
     a{
         overflow: hidden;
         position: relative;
-        display: block;
+        display: flex;
     }
     // Hover effect
     a:hover{
@@ -195,7 +223,7 @@ a.button{
     a:hover::after{
         position: absolute;
         content: "";
-        background-color: rgba(1,125,251,0.6);
+        background-color: $headerColorRGBA;
         opacity: 1;
         z-index: 0;
         width: 100%;
@@ -209,10 +237,16 @@ a.button{
     }
     .places-top-left,
     .places-top-right {
-        flex-direction: column;
-        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 30%;
     }
+    .places-bottom{
+        .place{
+            max-width: 50%;
+        }
     }
+}
     .place{
         padding: 10px;
         position: relative;
@@ -222,7 +256,7 @@ a.button{
                 bottom: 11%;
                 left: 5%;
                 margin: 0;
-                color: #fff;
+                color: $fontColorHover;
                 font-size: 1.75em;
                 z-index: 2;
             }
@@ -254,8 +288,8 @@ a.button{
             }
             .inner-btn.button{
                 background-color: transparent;
-                color: #fff;
-                border: 1px solid #fff;
+                color: $fontColorHover;
+                border: 1px solid $fontColorHover;
                 margin: 0 10px;
             }
         }
@@ -263,7 +297,7 @@ a.button{
 
 .fancybox-slide--iframe .fancybox-content{
     border-radius: 10px;
-    width: 70%;
+    // width: 95%;
 }
 .fancybox-iframe{
     border-radius: 10px;
@@ -271,7 +305,7 @@ a.button{
 
 // Recomended Hotels
 .recomended-hotels{
-    max-width: 1940px;
+    max-width: $maxWidthPage;
     margin: 0 auto;
     .hotel{
         flex-direction: column; 
@@ -290,7 +324,6 @@ a.button{
         img{
             transition: 0.5s ease;
             transform: scale(1.15);
-
         }
     }
     .hide{
@@ -329,15 +362,11 @@ a.button{
     justify-content: center;
     margin: 0 auto;
     padding: 60px;
-    .button{
-        color: #c5c5c5;
-        border: 1px solid #c5c5c5;
-    }
 }
 
 // Slider
 .swiper-container {
-    max-width: 1940px;;
+    max-width: $maxWidthPage;;
     width: 100%;
     height: 100%;
 }
@@ -383,7 +412,7 @@ footer{
     align-items: center;
     margin: 0 auto;
     padding: 60px;
-    color: #bdbdbd;
+    color: $headerColor;
     img{
         width: min-content;
         filter: grayscale(1);  
@@ -391,12 +420,26 @@ footer{
     }
 }
 //Contacts
+.contacs-section{
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    overflow: hidden;
+    .iphone{
+        transform: translateY(30%);
+        width: 35%;
+    }
+    .iphone img{
+        width: 100%;
+    }
+}
 .contact-container{
     margin: 0 auto;
-    width: 90%;
+    width: 100%;
+    max-width: $maxWidthPage;
     height: 100%;
-    background-color: peachpuff;
     border-radius: 7px 7px 0 0;
+    background-color: $backgroundColorLight;
+    color: $headerColor;
     .inputsForm{
         transition: ease 1s;
         flex-direction: column;
@@ -407,12 +450,12 @@ footer{
         input,
         textarea{
             width: 50%;
-            margin: 20px;
-            padding: 15px;
+            padding: 20px 10px 0;
             border: none;
             border-radius: 7px;
             resize: none;
             outline: none;
+            color: $headerColor;
         }
     }
     h4{
@@ -421,25 +464,25 @@ footer{
     .contact-content{
         width: 100%;
         height: 100%;
-        background-color: rosybrown;
+        background-color: $backgroundColorDark;
         border-radius: 7px 7px 0 0;
+        padding: 20px;
         .contact-item{
             flex-direction: column;
             justify-content: center;
             align-items: center;
             width: 100%;
-            padding-bottom: 50px;
             i{
                 font-size: 2em;
                 &:hover{
-                    color: #fff;
+                    color: $fontColorHover;
                 }
             }
         }
     }
 }
 .inputsForm.contactsDisplay{
-    transition: ease .1s;
+    transition: ease .5s;
     height: 50vh;
 }
 // responsive========

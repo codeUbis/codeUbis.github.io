@@ -36,32 +36,43 @@
         }
     }
 // RECOMENDED PLACES CONTENT=================================
-    .places-top{
-        flex-wrap: wrap;
-        flex-direction: row;
-        .places-top-left,
-        .places-top-center{
-            max-width: 50%;
-            a{
-                display: flex;
+    .recomended-places{
+        .places-top{
+            flex-wrap: wrap;
+            flex-direction: row;
+            .places-top-left,
+            .places-top-center{
+                max-width: 50%;
+                a{
+                    display: flex;
+                }
+                .button{
+                    padding: 10px 15px;
+                }
             }
-            .button{
-                padding: 10px 15px;
+            .places-top-right{
+                flex-direction: row;
+                max-width: 100%;
+                .button{
+                    padding: 10px 15px;
+                }
+                .place{
+                    max-width: 50%;
+                }
             }
-        }
-        .places-top-right{
+        } 
+        .places-bottom{
             flex-direction: row;
             .button{
                 padding: 10px 15px;
             }
-        }
+            .place{
+                max-width: 50%;
+            }
+        }   
     }
-    .places-bottom{
-        flex-direction: row;
-        .button{
-            padding: 10px 15px;
-        }
-    }
+    
+    
 }
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
 @media (max-width: 800px) {  
@@ -75,6 +86,7 @@
     overflow: hidden;
     height: 0px;
     max-height: 100%;
+    padding: 0;
     nav{
         margin: 20px 0 0;
     }
@@ -125,17 +137,20 @@
                     padding: 10.75px;
                     font-size: 1.5rem;
                 }
-                .button{
-                    align-items: f;
-                    margin: 5% 10% 0;
-                    padding: 0;
-                }
                 label{
                     text-align: start;
                     display: block;
                     width: 60%;
                     font-size: 1.5rem;
                 }
+                &-button{
+                    width: 50%;
+                    margin: 5% auto 0;
+                    .button{
+                        width: 100%;
+                    }
+                }
+
             }
         }
         .select2-selection__rendered{
@@ -181,23 +196,38 @@
        }
    }
 // RECOMENDED PLACES CONTENT=================================
-   .places-top{
-    flex-direction: column;
-    .places-top-left,
-    .places-top-center,
-    .places-top-right{
-        display: block;
-        max-width: 100%;
-        a{
-            width: 100%;
-            }
-        .button{
-            padding: 10px 20px;
-        }
-        }
-    }
-    .places-bottom{
+.recomended-places{
+    .places-top{
         flex-direction: column;
-    }
+        .places-top-left,
+        .places-top-center,
+        .places-top-right{
+            display: block;
+            flex-direction: column;
+            max-width: 100%;
+            .place{
+                max-width: 100%;
+            }
+            a{
+                max-width: 100%;
+                }
+            .button{
+                padding: 10px 20px;
+            }
+            }
+        }
+        .places-bottom{
+            flex-direction: column;
+            .place{
+                max-width: 100%;
+            }
+        }
+    }   
+// RECOMENDED PLACES CONTENT
+// ==========================================================
+.iphone{
+    display: none;
 }
+}
+
 

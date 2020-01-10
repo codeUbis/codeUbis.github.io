@@ -11,7 +11,7 @@ let contacts = document.getElementById('contacts');
 let screenSize = window.innerWidth;
 let hotelsNumb = 4;
 // window.onresize(console.log(screenSize));
-// console.log(hotelsContainer);
+console.log(seeMore.textContent);
 // BURGER MENU================================================
 navBarToggle.addEventListener('click', function () {
   navBar.classList.toggle('active');
@@ -30,14 +30,14 @@ window.addEventListener('scroll', function (){
 });
 // SEE MORE CONTENT=========================================== 
   // Checks the screen size
-function jsUpdateSize(){
+function updateSize(){
   // Get the dimensions of the viewport
   screenSize = window.innerWidth;
   screenWidth(screenSize);
   console.log(hotelsNumb);
 };
-window.onload = jsUpdateSize;// When the page loads first time
-window.onresize = jsUpdateSize;// When changes size
+window.onload = updateSize;// When the page loads first time
+window.onresize = updateSize;// When changes size
 function screenWidth (size){
   if(size > 1000){
     hotelsNumb = 4;
@@ -56,11 +56,16 @@ function screenWidth (size){
   };
 };
 seeMore.addEventListener('click', function(){
+  if(seeMore.textContent === "See More"){
+    seeMore.textContent = "See Less";
+  }else{
+    seeMore.textContent = "See More";
+  };
   for(let i = 0; i < hotels.length; i++){
     if(i >= hotelsNumb){
       hotels[i].classList.toggle('hide');
-    }   
-  }
+    };   
+  };
   hotelsContainer.scrollIntoView();
 });
 // SLIDER=====================================================
@@ -89,7 +94,7 @@ function contact(){
   contactsForm.classList.toggle("contactsDisplay");
   setTimeout(() => {
     contacts.scrollIntoView(false);
-  }, 150); 
+  }, 500); 
 }
 // SELECT INPUT===============================================
 $(document).ready(function() {
