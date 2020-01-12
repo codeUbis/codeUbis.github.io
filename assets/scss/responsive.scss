@@ -186,6 +186,11 @@
         }
     }
 }
+// CONTACTS
+// ==========================================================
+    .contacs-section{
+        min-height: 75vh;
+}
 /* Small devices (landscape phones, 576px and up) */
 @media (max-width: 576px) { 
 
@@ -223,10 +228,16 @@
             }
         }
     }   
-// RECOMENDED PLACES CONTENT
+// CONTACTS
 // ==========================================================
-.iphone{
-    display: none;
+.contacs-section{
+    min-height: 50vh;
+    .contact-container{
+        width: 100%;
+    }
+    .iphone{
+        display: none;
+    }
 }
 }
 

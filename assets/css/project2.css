@@ -144,7 +144,6 @@ a.button:hover {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-image: url(../images/landing_03.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -369,10 +368,13 @@ a.button:hover {
 
 .fancybox-slide--iframe .fancybox-content {
   border-radius: 10px;
+  width: 95%;
+  overflow: hidden;
 }
 
 .fancybox-iframe {
   border-radius: 10px;
+  overflow: hidden;
 }
 
 .recomended-hotels {
@@ -536,6 +538,7 @@ footer img {
 }
 
 .contacs-section {
+  position: relative;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
   -ms-flex-direction: row-reverse;
@@ -544,22 +547,40 @@ footer img {
   -ms-flex-align: end;
   align-items: flex-end;
   overflow: hidden;
+  min-height: 75vh;
+}
+
+.contacs-section .iphone-about {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  color: #c19a66;
 }
 
 .contacs-section .iphone {
-  -webkit-transform: translateY(30%);
-  -ms-transform: translateY(30%);
-  transform: translateY(30%);
-  width: 35%;
+  position: absolute;
+  -webkit-transform: translateY(20%);
+  -ms-transform: translateY(20%);
+  transform: translateY(20%);
+  width: 25%;
+  left: 5%;
 }
 
 .contacs-section .iphone img {
   width: 100%;
 }
 
+.contacs-section video {
+  position: absolute;
+  bottom: 18%;
+  left: 5%;
+  width: 90%;
+  z-index: 2;
+  border-radius: 8% 8% 0 0;
+}
+
 .contact-container {
-  margin: 0 auto;
-  width: 100%;
+  width: 75%;
   max-width: 1940px;
   height: 100%;
   border-radius: 7px 7px 0 0;
@@ -585,13 +606,14 @@ footer img {
 
 .contact-container .inputsForm input,
 .contact-container .inputsForm textarea {
-  width: 50%;
+  width: 60%;
   padding: 20px 10px 0;
   border: none;
   border-radius: 7px;
   resize: none;
   outline: none;
   color: #c19a66;
+  font-size: 16px;
 }
 
 .contact-container h4 {
@@ -632,7 +654,7 @@ footer img {
   -webkit-transition: ease .5s;
   -o-transition: ease .5s;
   transition: ease .5s;
-  height: 50vh;
+  height: 70vh;
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
@@ -853,6 +875,10 @@ footer img {
   }
 }
 
+.contacs-section {
+  min-height: 75vh;
+}
+
 /* Small devices (landscape phones, 576px and up) */
 @media (max-width: 576px) {
   .recomended-hotels .hotel {
@@ -898,7 +924,13 @@ footer img {
   .recomended-places .places-bottom .place {
     max-width: 100%;
   }
-  .iphone {
+  .contacs-section {
+    min-height: 50vh;
+  }
+  .contacs-section .contact-container {
+    width: 100%;
+  }
+  .contacs-section .iphone {
     display: none;
   }
 }

@@ -1,7 +1,0 @@
-<link href="https://fonts.googleapis.com/css?family=Molle:400i|Roboto:100,400,700,900&display=swap&subset=latin-ext" rel="stylesheet">
-
-
-font-family: 'Molle', cursive;
-font-family: 'Roboto', sans-serif;
-
-KozGoPr6N-RegularMolle-RegularRoboto-BlackRoboto-BoldRoboto-RegularRoboto-ThinStreetwear
