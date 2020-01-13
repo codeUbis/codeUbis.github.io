@@ -7,7 +7,6 @@
     <link href="https://fonts.googleapis.com/css?family=Molle:400i|Roboto:100,400,700,900&display=swap&subset=latin-ext" rel="stylesheet">
     <script src="https://kit.fontawesome.com/368f7e606b.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css" rel="stylesheet"/><!-- Select2 -->
-    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">Swiper -->
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css"><!-- OWL Carousel -->
     <link rel="stylesheet" href="assets/css/owl.theme.default.min.css"><!-- OWL Carousel -->
     <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css"><!-- Fancybox -->
@@ -33,7 +32,7 @@
                 <li><a href="#">Restraunts</a></li>
                 <li><a href="#">Things to do</a></li>
                 <li><a href="#contacts">Contacts</a></li>
-                <li><a href="#contacts" class="button">Become a Host</a></li>
+                <li><a href="https://www.google.com" targer="_blank" class="button">Become a Host</a></li>
             </ul>
         </nav>
     </section>
@@ -43,7 +42,7 @@
     <section class="landing-container flex">
         <img src="assets/images/newlogo.png" alt="explore">
         <h1>WELCOME TO HEAVEN</h1>
-        <a href="#" class="button">Check</a>
+        <a href="#recomended-hotels" class="button">Check offers</a>
     </section>
     
 <!-- SEARCH BAR
@@ -395,69 +394,75 @@
 ================================================== -->
 <div class="owl-carousel">
     <div>
-        <img src="assets/images/slide1.jpg" alt="canary-islands">
+        <img class="desktop-img"  src="assets/images/1sl.jpg" alt="canary-islands">
+        <img class="mobile-img"src="assets/images/1slmob.jpg" alt="new-zeland">
         <div class="slides-text">
             <h3>And then the God said let there be a <span>Greece</span></h3>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste asperiores maiores cupiditate voluptate ipsum placeat, modi vitae neque nulla aliquam!</p>
-            <p class="author">John Doe. mytravels.com</p>
+            <p class="author">Edvardas Ubis. explore.com</p>
         </div>
     </div>
     <div>
-        <img src="assets/images/slide2.jpg" alt="new-zeland">
+        <img class="desktop-img" src="assets/images/2sl.jpg" alt="new-zeland">
+        <img class="mobile-img"src="assets/images/2slmob.jpg" alt="new-zeland">
         <div class="slides-text">
-            <h3>And then the God said let there be a <span>Greece</span></h3>
+            <h3>And then the God said let there be a <span>France</span></h3>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste asperiores maiores cupiditate voluptate ipsum placeat, modi vitae neque nulla aliquam!</p>
-            <p class="author">John Doe. mytravels.com</p>
+            <p class="author">Edvardas Ubis. explore.com</p>
         </div>
     </div>
     <div>
-        <img src="assets/images/slide3.jpg" alt="norway">
+        <img class="desktop-img"  src="assets/images/3sl.jpg" alt="norway">
+        <img class="mobile-img"src="assets/images/3slmob.jpg" alt="new-zeland">
         <div class="slides-text">
-            <h3>And then the God said let there be a <span>Greece</span></h3>
+            <h3>And then the God said let there be a <span>Brasil</span></h3>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste asperiores maiores cupiditate voluptate ipsum placeat, modi vitae neque nulla aliquam!</p>
-            <p class="author">John Doe. mytravels.com</p>
+            <p class="author">Edvardas Ubis. explore.com</p>
         </div>
     </div>
     <div>
-        <img src="assets/images/slide4.jpg" alt="alps">
+        <img class="desktop-img"  src="assets/images/4sl.jpg" alt="alps">
+        <img class="mobile-img"src="assets/images/4slmob.jpg" alt="new-zeland">
         <div class="slides-text">
-            <h3>And then the God said let there be a <span>Greece</span></h3>
+            <h3>And then the God said let there be a <span>Spain</span></h3>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste asperiores maiores cupiditate voluptate ipsum placeat, modi vitae neque nulla aliquam!</p>
-            <p class="author">John Doe. mytravels.com</p>
+            <p class="author">Edvardas Ubis. explore.com</p>
         </div>
     </div>
 </div> 
-
 <!-- FOOTER
 ================================================== -->
-    <footer class="flex narrow">
-        <img src="assets/images/logo_03.png" alt="logo">
-        <p> &copysr; Copyright 2020. All rights reserved by Ubis</p>
-    </footer>
+<footer class="flex narrow">
+    <img src="assets/images/logo_03.png" alt="logo">
+    <p> &copysr; Copyright 2020. All rights reserved by Ubis</p>
+</footer>
 
+<!-- MAP
+================================================== --> 
+<!-- <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9219.931648457665!2d25.283583593668723!3d54.70992378263376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dd96b1c1c3bc9f%3A0xb4eca31b162c5579!2sVilnius%20Coding%20School%20-%20programavimo%20kursai!5e0!3m2!1slt!2slt!4v1578950909841!5m2!1slt!2slt" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="true"></iframe> -->
 <!-- CONTACTS
 ================================================== --> 
 <section class="flex contacs-section">
     <div class="contact-container" id="contacts">
-        <div class="inputsForm flex" id="form">
+        <div class="inputsForm flex contactsDisplay" id="form">
             <div class="input-form">
-                <input type="text" name="name" autocomplete="off" required>
+                <input id="name" type="text" name="name" autocomplete="off" required>
                 <label for="name" class="input-label-name">
                     <span class="input-content-name">Name</span>
                 </label>
             </div>
-            <div class="input-form">
-                <input type="text" name="subject" autocomplete="off" required>
+            <div class="input-form ">
+                <input id="subject" type="text" name="subject" autocomplete="off" required>
                 <label for="subject" class="input-label-name">
                     <span class="input-content-name">Subject</span>
                 </label>
             </div>
             <br>
-            <textarea name="" id="" cols="50" rows="10"></textarea>
+            <textarea name="textarea" id="textarea" cols="50" rows="10"></textarea>
             <br>
-            <button type="submit" class="button" onclick="contact()"> Send </button>
+            <button id="mail-submit" type="submit" class="button" onclick="contact()"> Send </button>
         </div>
-        <div class="contact-content flex">
+        <div class="contact-content  flex">
             <div class="contact-item flex">
                 <h4>Email Us</h4>
                 <i class="fas fa-envelope-open-text"  onclick="contact()"></i>
@@ -472,28 +477,18 @@
             </div>
         </div> 
     </div>
-    <!-- <div class="iphone-about">
-        <h3>Phone us this number</h3>
-        <p>+370 666 66666</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, iste.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, qui.</p>
-    </div> -->
+    
     <div class="iphone">
         <img src="assets/images/iphone.svg" alt="iphone">
         <video autoplay muted loop src="assets/video/RPReplay_Final1578696144.mov"></video>
     </div>
 </section>
-
-
 <!-- SCRIPTS
 ================================================== -->
     <script src="assets/scripts/jquery.js"></script><!-- jQuery -->
     <script src="assets/scripts/jquery.fancybox.min.js"></script><!-- Fancybox -->
-    <!-- <script src="https://unpkg.com/swiper/js/swiper.min.js"></script> Swiper -->
     <script src="assets/scripts/owl.carousel.min.js"></script><!-- Owl carousel -->
     <script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script><!-- Select2 -->
     <script src="assets/scripts/project.js"></script>
-    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqaF4gLmpBBYs_DoLBkoq1HaGwA_LbRAc&callback=initMap" -->
-    <!-- async defer></script> -->
 </body>
 </html>

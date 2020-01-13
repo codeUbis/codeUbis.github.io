@@ -235,12 +235,41 @@
             }
         }
     }   
+// SLIDER
+// ==========================================================
+.owl-stage{
+    .slides-text{
+        font-size: .6rem;
+        p{
+            font-size: 1rem;
+        }
+    }
+}
+.owl-stage{
+    .owl-item{
+        div{
+            .desktop-img{
+            display: none;
+            }
+            .mobile-img{
+                display: block;
+            }
+        }
+    }
+}
 // CONTACTS
 // ==========================================================
 .contacs-section{
     min-height: 50vh;
     .contact-container{
         width: 100%;
+        input,
+        textarea{
+            width: 60%;
+        }
+        .input-form{
+            width: 60%;
+        }
     }
     .iphone{
         display: none;

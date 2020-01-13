@@ -170,6 +170,7 @@ a.button:hover {
 }
 
 .searchbar-container {
+  display: none;
   margin: 0 auto;
   max-width: 1940px;
   background-color: #101117;
@@ -520,6 +521,14 @@ a.button:hover {
   object-fit: cover;
 }
 
+.owl-stage .owl-item div .desktop-img {
+  display: block;
+}
+
+.owl-stage .owl-item div .mobile-img {
+  display: none;
+}
+
 .owl-stage .slides-text {
   position: absolute;
   -webkit-transform: translate(-50%, -50%);
@@ -546,6 +555,10 @@ a.button:hover {
   color: #0dcfff;
 }
 
+.owl-stage .slides-text p {
+  width: 70%;
+}
+
 .owl-nav .owl-next span {
   position: absolute;
   display: -webkit-box;
@@ -558,7 +571,7 @@ a.button:hover {
   -ms-flex-align: center;
   align-items: center;
   width: 5%;
-  top: 50%;
+  bottom: 45%;
   font-size: 500%;
   right: 5%;
   color: #fff;
@@ -576,7 +589,7 @@ a.button:hover {
   -ms-flex-align: center;
   align-items: center;
   width: 5%;
-  top: 50%;
+  bottom: 45%;
   font-size: 500%;
   left: 5%;
   color: #fff;
@@ -635,6 +648,10 @@ footer img {
   filter: grayscale(1);
 }
 
+iframe {
+  width: 100%;
+}
+
 .contacs-section {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
@@ -662,6 +679,7 @@ footer img {
   -webkit-transform: translateY(20%);
   -ms-transform: translateY(20%);
   transform: translateY(20%);
+  overflow: hidden;
 }
 
 .contacs-section .iphone img {
@@ -702,9 +720,8 @@ footer img {
   overflow: hidden;
 }
 
-.contact-container .inputsForm input,
-.contact-container .inputsForm textarea {
-  width: 60%;
+.contact-container .inputsForm input {
+  width: 40%;
   padding: 20px 10px 0;
   border: none;
   border-radius: 7px;
@@ -712,6 +729,22 @@ footer img {
   outline: none;
   color: #c19a66;
   font-size: 16px;
+}
+
+.contact-container .inputsForm textarea {
+  width: 40%;
+  padding: 20px 10px 0;
+  border: none;
+  border-radius: 7px;
+  resize: none;
+  outline: none;
+  color: #c19a66;
+  font-size: 16px;
+  background-color: #e7e7e7;
+}
+
+.contact-container .inputsForm button {
+  margin-bottom: 10px;
 }
 
 .contact-container h4 {
@@ -1028,11 +1061,30 @@ footer img {
   .recomended-places .places-bottom .place {
     width: 100%;
   }
+  .owl-stage .slides-text {
+    font-size: .6rem;
+  }
+  .owl-stage .slides-text p {
+    font-size: 1rem;
+  }
+  .owl-stage .owl-item div .desktop-img {
+    display: none;
+  }
+  .owl-stage .owl-item div .mobile-img {
+    display: block;
+  }
   .contacs-section {
     min-height: 50vh;
   }
   .contacs-section .contact-container {
     width: 100%;
+  }
+  .contacs-section .contact-container input,
+  .contacs-section .contact-container textarea {
+    width: 60%;
+  }
+  .contacs-section .contact-container .input-form {
+    width: 60%;
   }
   .contacs-section .iphone {
     display: none;

@@ -143,6 +143,7 @@ a.button{
 }
 // Searchbar container
 .searchbar-container{
+    display: none;
     margin: 0 auto;
     max-width: $maxWidthPage;
     background-color: $backgroundColorDark;
@@ -161,7 +162,6 @@ a.button{
             overflow: hidden;
         }
     }
-
     .searchbar-selections{
         width: 100%;
         margin: 0 auto;
@@ -397,6 +397,12 @@ a.button{
             img{
                 object-fit: cover;
             }
+            .desktop-img{
+                display: block;
+            }
+            .mobile-img{
+                display: none;
+            }
         }
     }
     .slides-text{
@@ -416,6 +422,9 @@ a.button{
                 color: #0dcfff;
             }
         }
+        p{
+            width: 70%;
+        }
     }
 }
 .owl-nav{
@@ -426,7 +435,7 @@ a.button{
             justify-content: center;
             align-items: center;
             width: 5%;
-            top: 50%;
+            bottom: 45%;
             font-size: 500%;
             right: 5%;
             color: #fff;
@@ -439,7 +448,7 @@ a.button{
             justify-content: center;
             align-items: center;
             width: 5%;
-            top: 50%;
+            bottom: 45%;
             font-size: 500%;
             left: 5%;
             color: #fff;
@@ -482,6 +491,11 @@ footer{
 
     }
 }
+//MAP
+//================================================== 
+iframe{
+    width: 100%;
+}
 //CONTACTS
 // ===============================================================
 .contacs-section{
@@ -501,6 +515,7 @@ footer{
         width: 25%;
         left: 5%;
         transform: translateY(20%);
+        overflow: hidden;
     }
     .iphone img{
         width: 100%;
@@ -528,9 +543,18 @@ footer{
         padding: 0;
         height: 0;
         overflow: hidden;
-        input,
+        input{
+            width: 40%;
+            padding: 20px 10px 0;
+            border: none;
+            border-radius: 7px;
+            resize: none;
+            outline: none;
+            color: $headerColor;
+            font-size: 16px; 
+        }
         textarea{
-            width: 60%;
+            width: 40%;
             padding: 20px 10px 0;
             border: none;
             border-radius: 7px;
@@ -538,6 +562,10 @@ footer{
             outline: none;
             color: $headerColor;
             font-size: 16px;
+            background-color: #e7e7e7;
+        }
+        button{
+            margin-bottom: 10px;
         }
     }
     h4{

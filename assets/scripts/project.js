@@ -8,10 +8,13 @@ let seeMore = document.getElementById('more-offers');
 let hotels = document.getElementsByClassName('hotel');
 let hotelsContainer = document.getElementById('recomended-hotels');
 let contacts = document.getElementById('contacts');
+let mailSubmit = document.getElementById('mail-submit');
+let nameInput = document.getElementById('name');
+let subjectInput = document.getElementById('subject');
+let textAreaInput = document.getElementById('textarea');
 let screenSize = window.innerWidth;
 let hotelsNumb = 4;
-// window.onresize(console.log(screenSize));
-console.log(seeMore.textContent);
+console.log(mailSubmit);
 // BURGER MENU================================================
 navBarToggle.addEventListener('click', function () {
   navBar.classList.toggle('active');
@@ -97,6 +100,12 @@ function contact(){
     contacts.scrollIntoView(false);
   }, 500); 
 }
+  //Reset values of input form
+mailSubmit.addEventListener('click', function(){
+  nameInput.value = "";
+  subjectInput.value = "";
+  textAreaInput.value = "";
+});
 // SELECT INPUT===============================================
 $(document).ready(function() {
   $('.js-example-basic-single').select2({
