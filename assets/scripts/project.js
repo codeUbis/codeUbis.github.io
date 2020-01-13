@@ -69,26 +69,27 @@ seeMore.addEventListener('click', function(){
   hotelsContainer.scrollIntoView();
 });
 // SLIDER=====================================================
-let mySwiper = new Swiper ('.swiper-container', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
-    keyboard: {
-        enabled: true,
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      dynamicBullets: true,
-    },
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    }   
-  })
-  $('[data-fancybox="gallery"]').fancybox({
-    // Options will go here
+// OWL
+
+$(document).ready(function(){
+  $(".owl-carousel").owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    autoplay: true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        1000:{
+            items:1
+        }
+    }
   });
+});
 // CONTACTS===================================================
 function contact(){
   contactsForm.classList.toggle("contactsDisplay");

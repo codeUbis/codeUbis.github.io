@@ -7,7 +7,9 @@
     <link href="https://fonts.googleapis.com/css?family=Molle:400i|Roboto:100,400,700,900&display=swap&subset=latin-ext" rel="stylesheet">
     <script src="https://kit.fontawesome.com/368f7e606b.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css" rel="stylesheet"/><!-- Select2 -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css"><!-- Swiper -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">Swiper -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css"><!-- OWL Carousel -->
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css"><!-- OWL Carousel -->
     <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css"><!-- Fancybox -->
     <link rel="stylesheet" href="assets/css/input_animation.css"><!-- input animation -->
     <link rel="stylesheet" href="assets/css/project2.css">
@@ -22,7 +24,7 @@
         </span>
         <nav class="main-nav flex">
             <div class="flex">
-                <img src="assets/images/logo_03.png" alt="logo">
+                <img src="assets/images/newlogo.png" alt="logo">
             </div>
             <ul class="nav-links flex">
                 <li><a href="#recomended-hotels">Hotels</a></li>
@@ -38,10 +40,10 @@
     
 <!-- LANDING PAGE
 ================================================== -->
-    <section class="landing-container flex" style="background-image: url(assets/images/landing_03RDY.jpg);">
-        <img src="assets/images/country_05.png" alt="greece">
+    <section class="landing-container flex">
+        <img src="assets/images/newlogo.png" alt="explore">
         <h1>WELCOME TO HEAVEN</h1>
-        <a href="#" class="button">Check offer</a>
+        <a href="#" class="button">Check</a>
     </section>
     
 <!-- SEARCH BAR
@@ -148,7 +150,7 @@
                 <div class="places-top-center flex">
                     <div class="place flex">
                         <a href="https://en.wikipedia.org/wiki/france" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false}}'>
-                            <img src="assets/images/france.jpg" alt="france">
+                            <img src="assets/images/franceRDY.jpg" alt="france">
                             <div class="container flex">
                                 <h3>France</h3>
                                 <div class="inner">
@@ -391,44 +393,41 @@
     
 <!-- SLIDER
 ================================================== -->
-    <section>
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide">
-                    <img src="assets/images/sahara.jpg" alt="">
-                    <div class="slides-text">
-                        <h3>And then the God said let there be a <span>Greece</span></h3>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste asperiores maiores cupiditate voluptate ipsum placeat, modi vitae neque nulla aliquam!</p>
-                        <p class="author">John Doe. mytravels.com</p>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/athens_10.jpg" alt="">
-                    <div class="slides-text">
-                        <h3>And then the God said let there be a <span>Greece</span></h3>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste asperiores maiores cupiditate voluptate ipsum placeat, modi vitae neque nulla aliquam!</p>
-                        <p class="author">John Doe. mytravels.com</p>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/Siauliai.jpg" alt="">
-                    <div class="slides-text">
-                        <h3>And then the God said let there be a <span>Greece</span></h3>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste asperiores maiores cupiditate voluptate ipsum placeat, modi vitae neque nulla aliquam!</p>
-                        <p class="author">John Doe. mytravels.com</p>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-pagination swiper-pagination-white"></div>
-            <div class="swiper-button-prev swiper-button-white"></div>
-            <div class="swiper-button-next swiper-button-white"></div>
+<div class="owl-carousel">
+    <div>
+        <img src="assets/images/slide1.jpg" alt="canary-islands">
+        <div class="slides-text">
+            <h3>And then the God said let there be a <span>Greece</span></h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste asperiores maiores cupiditate voluptate ipsum placeat, modi vitae neque nulla aliquam!</p>
+            <p class="author">John Doe. mytravels.com</p>
         </div>
-    </section>
+    </div>
+    <div>
+        <img src="assets/images/slide2.jpg" alt="new-zeland">
+        <div class="slides-text">
+            <h3>And then the God said let there be a <span>Greece</span></h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste asperiores maiores cupiditate voluptate ipsum placeat, modi vitae neque nulla aliquam!</p>
+            <p class="author">John Doe. mytravels.com</p>
+        </div>
+    </div>
+    <div>
+        <img src="assets/images/slide3.jpg" alt="norway">
+        <div class="slides-text">
+            <h3>And then the God said let there be a <span>Greece</span></h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste asperiores maiores cupiditate voluptate ipsum placeat, modi vitae neque nulla aliquam!</p>
+            <p class="author">John Doe. mytravels.com</p>
+        </div>
+    </div>
+    <div>
+        <img src="assets/images/slide4.jpg" alt="alps">
+        <div class="slides-text">
+            <h3>And then the God said let there be a <span>Greece</span></h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste asperiores maiores cupiditate voluptate ipsum placeat, modi vitae neque nulla aliquam!</p>
+            <p class="author">John Doe. mytravels.com</p>
+        </div>
+    </div>
+</div> 
 
-    <!-- Map -->
-    <!-- <section id="map"></section> -->
-    
 <!-- FOOTER
 ================================================== -->
     <footer class="flex narrow">
@@ -490,7 +489,8 @@
 ================================================== -->
     <script src="assets/scripts/jquery.js"></script><!-- jQuery -->
     <script src="assets/scripts/jquery.fancybox.min.js"></script><!-- Fancybox -->
-    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script><!-- Swiper -->
+    <!-- <script src="https://unpkg.com/swiper/js/swiper.min.js"></script> Swiper -->
+    <script src="assets/scripts/owl.carousel.min.js"></script><!-- Owl carousel -->
     <script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script><!-- Select2 -->
     <script src="assets/scripts/project.js"></script>
     <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqaF4gLmpBBYs_DoLBkoq1HaGwA_LbRAc&callback=initMap" -->

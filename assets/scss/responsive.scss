@@ -2,6 +2,9 @@
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (max-width: 1400px){
+    html{
+        font-size: 14px;
+    }
     .places-top,
     .places-bottom{
         .button{
@@ -25,6 +28,9 @@
     html{
         font-size: 9px;
     }
+    .landing-container{
+        background-attachment: scroll;
+    }
 
 // RECOMENDED HOTELS CONTENT=================================
     .recomended-hotels-content{
@@ -32,7 +38,7 @@
     }
     .recomended-hotels{
         .hotel{
-            max-width: 33.3333%;
+            width: 33.3333%;
         }
     }
 // RECOMENDED PLACES CONTENT=================================
@@ -42,7 +48,7 @@
             flex-direction: row;
             .places-top-left,
             .places-top-center{
-                max-width: 50%;
+                width: 50%;
                 a{
                     display: flex;
                 }
@@ -52,12 +58,12 @@
             }
             .places-top-right{
                 flex-direction: row;
-                max-width: 100%;
+                width: 100%;
                 .button{
                     padding: 10px 15px;
                 }
                 .place{
-                    max-width: 50%;
+                    width: 50%;
                 }
             }
         } 
@@ -67,7 +73,7 @@
                 padding: 10px 15px;
             }
             .place{
-                max-width: 50%;
+                width: 50%;
             }
         }   
     }
@@ -115,12 +121,13 @@
             font-size: 1.5em;
         } 
     }
+    &.active{
+        transition: 1s ease;
+        overflow: hidden;
+        height: 200vh;
+    }
 }
-.active{
-    transition: 1s ease;
-    overflow: hidden;
-    height: 200vh;
-}
+
 // SEARVHBAR=================================
     .searchbar-container{
         .searchbar-selections{
@@ -166,6 +173,7 @@
             i{
                 transition: 1s ease;
                 color: burlywood;
+                height: auto;
             }
         }
         .pressed{
@@ -182,14 +190,9 @@
 // RECOMENDED HOTELS CONTENT=================================
     .recomended-hotels{
         .hotel{
-            max-width: 50%;
+            width: 50%;
         }
     }
-}
-// CONTACTS
-// ==========================================================
-    .contacs-section{
-        min-height: 75vh;
 }
 /* Small devices (landscape phones, 576px and up) */
 @media (max-width: 576px) { 
@@ -197,11 +200,15 @@
 // RECOMENDED HOTELS CONTENT=================================
    .recomended-hotels{
        .hotel{
-           max-width: 100%
+           width: 80%;
+        //    padding: 20px;
        }
    }
 // RECOMENDED PLACES CONTENT=================================
 .recomended-places{
+    .container{
+        font-size: 1.5rem;
+    }
     .places-top{
         flex-direction: column;
         .places-top-left,
@@ -209,13 +216,13 @@
         .places-top-right{
             display: block;
             flex-direction: column;
-            max-width: 100%;
+            width: 100%;
             .place{
-                max-width: 100%;
+                width: 100%;
             }
             a{
-                max-width: 100%;
-                }
+                width: 100%;
+            }
             .button{
                 padding: 10px 20px;
             }
@@ -224,7 +231,7 @@
         .places-bottom{
             flex-direction: column;
             .place{
-                max-width: 100%;
+                width: 100%;
             }
         }
     }   
