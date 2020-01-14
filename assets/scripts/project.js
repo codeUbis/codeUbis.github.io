@@ -14,7 +14,7 @@ let subjectInput = document.getElementById('subject');
 let textAreaInput = document.getElementById('textarea');
 let screenSize = window.innerWidth;
 let hotelsNumb = 4;
-console.log(mailSubmit);
+// console.log(hotelRating);
 // BURGER MENU================================================
 navBarToggle.addEventListener('click', function () {
   navBar.classList.toggle('active');
@@ -38,6 +38,7 @@ function updateSize(){
   screenSize = window.innerWidth;
   screenWidth(screenSize);
   console.log(hotelsNumb);
+  seeMore.textContent = "See More";
 };
 window.onload = updateSize;// When the page loads first time
 window.onresize = updateSize;// When changes size
@@ -71,9 +72,8 @@ seeMore.addEventListener('click', function(){
   };
   hotelsContainer.scrollIntoView();
 });
-// SLIDER=====================================================
 // OWL
-
+// SLIDER=====================================================
 $(document).ready(function(){
   $(".owl-carousel").owlCarousel({
     loop:true,
@@ -102,9 +102,15 @@ function contact(){
 }
   //Reset values of input form
 mailSubmit.addEventListener('click', function(){
-  nameInput.value = "";
-  subjectInput.value = "";
-  textAreaInput.value = "";
+  if(nameInput.value != "" && subjectInput.value != "" && textAreaInput.value != ""){
+    alert('Message was sent sucessfuly!');
+    nameInput.value = "";
+    subjectInput.value = "";
+    textAreaInput.value = "";
+    contact();
+  }else{
+    alert('Please fill in all required fields');
+  }
 });
 // SELECT INPUT===============================================
 $(document).ready(function() {

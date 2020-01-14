@@ -7,6 +7,7 @@ $fontColorHover: #fff;
 $hoverColorPlaces: green;
 $backgroundColorDark: #101117;
 $backgroundColorLight:#434343;
+$daysLeft: rgba(190, 41, 41, 0.6);
 $maxWidthPage: 1940px;
 
 // Reset
@@ -367,6 +368,24 @@ a.button{
     p{
         margin: 0;
         padding-bottom: 25px;
+    }
+    i:hover{
+        color: rgba(233, 159, 0, 0.5);
+    }
+    .hotel-name{
+        font-size: 1.2rem;
+        color: $headerColor;
+        padding-bottom: 10px;
+    }
+    .hotel-price{
+        font-size: 2rem;
+        color: $headerColor;
+        padding: 0;
+    }
+    .hotel-days{
+        text-align: center;
+        padding-bottom: 35px;
+        color: $daysLeft;
     }
 }
 .hotel-bottom-more{
