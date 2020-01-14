@@ -1,0 +1,3 @@
+#Mokomes Git
+
+trumpas aprasymas
