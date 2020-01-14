@@ -1,3 +1,3 @@
-#Mokomes Git
+# Mokomes Git
 
 trumpas aprasymas
