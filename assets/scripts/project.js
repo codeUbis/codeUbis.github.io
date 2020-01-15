@@ -72,6 +72,13 @@ seeMore.addEventListener('click', function(){
   };
   hotelsContainer.scrollIntoView();
 });
+// SELECT INPUT===============================================
+$(document).ready(function() {
+  $('.js-example-basic-single').select2({
+    placeholder: "select",
+    width: '100%'
+  });
+});
 // OWL
 // SLIDER=====================================================
 $(document).ready(function(){
@@ -111,11 +118,4 @@ mailSubmit.addEventListener('click', function(){
   }else{
     alert('Please fill in all required fields');
   }
-});
-// SELECT INPUT===============================================
-$(document).ready(function() {
-  $('.js-example-basic-single').select2({
-    placeholder: "select",
-    width: '100%'
-  });
 });
